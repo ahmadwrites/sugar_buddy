@@ -8,11 +8,11 @@
     <item
         android:id="@+id/dashboard"
         android:icon="@drawable/ic_baseline_dashboard_24"
-        android:title="Explore" />
+        android:title="Dashboard" />
     <item
         android:id="@+id/checkIn"
         android:icon="@drawable/ic_baseline_add_box_24"
-        android:title="Create" />
+        android:title="Check In" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person_24"
