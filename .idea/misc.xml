@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.1785" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/drawable/button_background.xml" value="0.1785" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/drawable/edit_text_background.xml" value="0.1785" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/font/font.xml" value="0.20989583333333334" />
@@ -11,6 +12,11 @@
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/activity_register.xml" value="0.1796875" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/activity_splash_screen.xml" value="0.1796875" />
+        <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/fragment_check_in.xml" value="0.1796875" />
+        <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/fragment_dashboard.xml" value="0.1796875" />
+        <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/fragment_home.xml" value="0.1796875" />
+        <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/fragment_profile.xml" value="0.1796875" />
+        <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/menu/nav_bottom_menu.xml" value="0.1796875" />
       </map>
     </option>
   </component>

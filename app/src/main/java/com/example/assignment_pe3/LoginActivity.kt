@@ -18,6 +18,12 @@ class LoginActivity : AppCompatActivity() {
         btnLogin = findViewById<Button>(R.id.btn_login)
         tvRegister = findViewById<TextView>(R.id.tv_register)
 
+        btnLogin.setOnClickListener(View.OnClickListener {
+            val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        })
+
         tvRegister.setOnClickListener(View.OnClickListener {
             val intent: Intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
