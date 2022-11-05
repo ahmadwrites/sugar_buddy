@@ -5,10 +5,197 @@
     android:layout_height="match_parent"
     tools:context=".CheckInFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="CHECK IN FRAGMENT" />
+        android:background="@color/blue_50"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Check In"
+            android:textColor="@color/blue_900"
+            android:textSize="32sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_check_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_700"
+                android:text="New"
+                android:textColor="#fff"
+                android:theme="@style/Theme.MaterialComponents.Light" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:theme="@style/Theme.MaterialComponents.Light" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/blue_900"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Current Glucose Level (mg/dl)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="@color/blue_100"
+                    android:hint="Current Glucose Level (mg/dl)"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/blue_900"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Carbohydrates Consumed (g)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="@color/blue_100"
+                    android:hint="Carbohydrates Consumed (g)"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/blue_900"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Meal Description"
+                    android:textColor="@color/blue_900"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="@color/blue_100"
+                    android:hint="Meal Description"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/blue_900"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Side Effects / Injuries"
+                    android:textColor="@color/blue_900"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="@color/blue_100"
+                    android:hint="Side Effects / Injuries"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/blue_900"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Insulin Injected (unit)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="@color/blue_100"
+                    android:hint="Insulin Injected (unit)"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/blue_900"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Number of Times Insulin Injected"
+                    android:textColor="@color/blue_900"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="@color/blue_100"
+                    android:hint="Number of Times Insulin Injected"
+                    android:padding="16dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="16dp"
+                    android:gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="#ccc"
+                        android:text="Cancel" />
+
+                    <Button
+                        android:textColor="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:text="Submit" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
 
 </FrameLayout>

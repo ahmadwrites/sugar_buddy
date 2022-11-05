@@ -1,10 +1,13 @@
 package com.example.assignment_pe3
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
+import com.google.android.material.chip.Chip
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +20,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class CheckInFragment : Fragment() {
+    lateinit var chipHistory: Chip
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,8 +38,22 @@ class CheckInFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_check_in, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_check_in, container, false)
+
+        chipHistory = view.findViewById<Chip>(R.id.chip_history)
+        chipHistory.setOnClickListener(View.OnClickListener {
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(
+                R.id.frame_layout,
+                CheckInHistoryFragment()
+            )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        })
+
+        return view
     }
 
     companion object {

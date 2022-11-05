@@ -3,13 +3,9 @@ package com.example.assignment_pe3
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentTransaction
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.chip.Chip
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,13 +15,11 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
+ * Use the [CheckInHistoryFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HomeFragment : Fragment() {
-    lateinit var btnCheckIn: Button
-    lateinit var cardHistory: CardView
-
+class CheckInHistoryFragment : Fragment() {
+    lateinit var chipCheckIn:Chip
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -42,41 +36,19 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
-
-        btnCheckIn = view.findViewById<Chip>(R.id.btn_check_in)
-        cardHistory = view.findViewById<CardView>(R.id.card_history)
-
-        btnCheckIn.setOnClickListener(View.OnClickListener {
-//            val fragmentManager = parentFragmentManager
-//            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-//            fragmentTransaction.replace(
-//                R.id.frame_layout,
-//                CheckInFragment()
-//            )
-//            fragmentTransaction.addToBackStack(null)
-//            fragmentTransaction.commit()
-
-            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
-                R.id.checkIn;
-
-        })
-
-        cardHistory.setOnClickListener(View.OnClickListener {
-            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
-                R.id.checkIn;
-
+        val view = inflater.inflate(R.layout.fragment_check_in_history, container, false)
+        chipCheckIn = view.findViewById<Chip>(R.id.chip_check_in)
+        chipCheckIn.setOnClickListener(View.OnClickListener {
             val fragmentManager = parentFragmentManager
             val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(
                 R.id.frame_layout,
-                CheckInHistoryFragment()
+                CheckInFragment()
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
         })
-
         // Inflate the layout for this fragment
         return view
     }
@@ -88,12 +60,12 @@ class HomeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
+         * @return A new instance of fragment CheckInHistoryFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            CheckInHistoryFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
