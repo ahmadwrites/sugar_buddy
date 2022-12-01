@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthProfileFragment">
+
+    <!-- TODO: Update Health Profile -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_50"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_test" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:text="James Lucas"
+                android:textColor="@color/blue_900"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/btn_edit_health_profile"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="Edit Health Profile"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:id="@+id/tv_personal_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/blue_900"
+                android:textSize="22dp"
+                android:text="Health Measurement Profile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Body Temperature (Celsius)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_temperature_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="125dp"
+                    android:text="36"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_blood_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Blood Pressure (/mmHg)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_blood_pressure_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="110dp"
+                    android:text="130/80"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_blood_oxygen_saturation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Blood Oxygen Saturation (%)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_blood_oxygen_saturation_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="120dp"
+                    android:text="95"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_body_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Body Weight (kg)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_body_weight_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="212dp"
+                    android:text="70"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_body_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Body Height (cm)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_body_height_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="199dp"
+                    android:text="170"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_glucose_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Glucose Level (mg/dL)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_glucose_level_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="158dp"
+                    android:text="110"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_heart_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Heart Rate (BPM)"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_heart_rate_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="199dp"
+                    android:text="110"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_last_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Last Profile Update"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_last_update_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginLeft="91dp"
+                    android:text="20/10/22 13:50"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/calc_health_score_button"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background"
+                android:text="Calculate Health Score"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

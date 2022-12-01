@@ -6,9 +6,141 @@
     tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="PROFILE FRAGMENT" />
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_50"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_test" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:text="James Lucas"
+                android:textColor="@color/blue_900"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:textAlignment="center"
+                android:text="jameslucas@hotmail.com"
+                android:textColor="@color/gray_200"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_health_profile"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background2"
+                    android:layout_marginLeft="40dp"
+                    android:text="Health Profile"
+                    android:textAllCaps="false"
+                    android:textColor="#2e2d2d"/>
+
+                <Button
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:layout_marginLeft="20dp"
+                    android:text="Edit Profile"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_personal_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/blue_900"
+                android:textSize="22dp"
+                android:text="Personal Information" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_info_1"
+                    android:layout_width="282dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_password_key_24"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Change Password"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_info_2"
+                    android:layout_width="282dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_more_24"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Personalize News"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_info_3"
+                    android:layout_width="282dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_exit_24"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Logout"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

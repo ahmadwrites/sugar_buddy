@@ -25,6 +25,9 @@ private const val ARG_PARAM2 = "param2"
 class HomeFragment : Fragment() {
     lateinit var btnCheckIn: Button
     lateinit var cardHistory: CardView
+    lateinit var cardJournal: CardView
+    lateinit var cardReport: CardView
+    lateinit var contactReport: CardView
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -46,6 +49,9 @@ class HomeFragment : Fragment() {
 
         btnCheckIn = view.findViewById<Chip>(R.id.btn_check_in)
         cardHistory = view.findViewById<CardView>(R.id.card_history)
+        cardJournal = view.findViewById<CardView>(R.id.card_journal)
+        cardReport = view.findViewById<CardView>(R.id.card_report)
+        contactReport = view.findViewById<CardView>(R.id.card_contact)
 
         btnCheckIn.setOnClickListener(View.OnClickListener {
 //            val fragmentManager = parentFragmentManager
@@ -62,6 +68,36 @@ class HomeFragment : Fragment() {
 
         })
 
+        contactReport.setOnClickListener(View.OnClickListener {
+            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
+                R.id.checkIn;
+
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(
+                R.id.frame_layout,
+                ContactProfessionalFragment()
+            )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        })
+
+        cardReport.setOnClickListener(View.OnClickListener {
+            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
+                R.id.checkIn;
+
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(
+                R.id.frame_layout,
+                ReportSymptomsFragment()
+            )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        })
+
         cardHistory.setOnClickListener(View.OnClickListener {
             (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
                 R.id.checkIn;
@@ -71,6 +107,21 @@ class HomeFragment : Fragment() {
             fragmentTransaction.replace(
                 R.id.frame_layout,
                 CheckInHistoryFragment()
+            )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        })
+
+        cardJournal.setOnClickListener(View.OnClickListener {
+            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
+                R.id.home;
+
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(
+                R.id.frame_layout,
+                JournalFragment()
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()

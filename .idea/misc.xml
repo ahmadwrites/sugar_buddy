@@ -19,6 +19,32 @@
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/fragment_home.xml" value="0.1796875" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/layout/fragment_profile.xml" value="0.1796875" />
         <entry key="..\:/Users/Ahmad/OneDrive/Desktop/Xiamen University/year 3/year 3 sem 3/Mobile Application System Design/assignment_pe3/app/src/main/res/menu/nav_bottom_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/drawable/button_background.xml" value="0.1745" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/drawable/button_background2.xml" value="0.1745" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/drawable/ic_baseline_arrow_forward_btn_24.xml" value="0.1745" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/drawable/ic_baseline_body_weight_24.xml" value="0.1745" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/drawable/ic_baseline_more_24.xml" value="0.1745" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/drawable/ic_baseline_password_key_24.xml" value="0.1745" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/activity_edit_profile.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/activity_get_started.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/activity_login.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/activity_register.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/activity_splash_screen.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_check_in.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_check_in_history.xml" value="0.184375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_contact_professional.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_edit_health_profile.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_edit_profile.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_health_profile.xml" value="0.2453125" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_health_score.xml" value="0.2453125" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_journal.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_journal_history.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/layout/fragment_report_symptoms.xml" value="0.259375" />
+        <entry key="..\:/Users/Jerry/Documents/DEV/sugar_buddy/app/src/main/res/menu/nav_bottom_menu.xml" value="0.259375" />
       </map>
     </option>
   </component>

@@ -1,14 +1,12 @@
 package com.example.assignment_pe3
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.chip.Chip
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,12 +15,11 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
+ * Use the [JournalFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ProfileFragment : Fragment() {
-    lateinit var btnEditProfile: Button
-    lateinit var btnHealthProfile: Button
+class JournalFragment : Fragment() {
+    lateinit var chipJournalHistory: Chip
 
     private var param1: String? = null
     private var param2: String? = null
@@ -40,27 +37,14 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view: View = inflater.inflate(R.layout.fragment_profile, container, false)
-        btnEditProfile = view.findViewById<Button>(R.id.btn_edit_profile)
-        btnHealthProfile = view.findViewById<Button>(R.id.btn_health_profile)
-
-        btnEditProfile.setOnClickListener(View.OnClickListener {
+        val view: View = inflater.inflate(R.layout.fragment_journal, container, false)
+        chipJournalHistory = view.findViewById<Chip>(R.id.chip_journal_history)
+        chipJournalHistory.setOnClickListener(View.OnClickListener {
             val fragmentManager = parentFragmentManager
             val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(
                 R.id.frame_layout,
-                EditProfileFragment()
-            )
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
-        })
-
-        btnHealthProfile.setOnClickListener(View.OnClickListener {
-            val fragmentManager = parentFragmentManager
-            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(
-                R.id.frame_layout,
-                HealthProfileFragment()
+                JournalHistoryFragment()
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
@@ -75,12 +59,12 @@ class ProfileFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragment.
+         * @return A new instance of fragment JournalFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
+            JournalFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

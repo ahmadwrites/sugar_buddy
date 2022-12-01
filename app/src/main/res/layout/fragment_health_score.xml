@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthScoreFragment">
+
+    <!-- TODO: Update Health Score -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_50"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Health Score"
+            android:textColor="@color/blue_900"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textAlignment="center"
+                android:text="Your Health Score Today:"
+                android:textColor="@color/blue_900"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textAlignment="center"
+                android:text="90"
+                android:textColor="#54B415"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_thin"
+                android:textAlignment="center"
+                android:text="Good! You have maintained your healthy lifestyle today!\nKeep it up!"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_health_profile"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background2"
+                    android:layout_marginLeft="40dp"
+                    android:text="Back to Home"
+                    android:textAllCaps="false"
+                    android:textColor="#2e2d2d"/>
+
+                <Button
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:layout_marginLeft="20dp"
+                    android:text="Share"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
