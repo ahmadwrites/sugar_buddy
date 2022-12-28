@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350043765411",
+    "project_id": "sugarbuddy-b1109",
+    "storage_bucket": "sugarbuddy-b1109.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350043765411:android:80cee51db47b7a0d0b1d16",
+        "android_client_info": {
+          "package_name": "com.example.assignment_pe3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350043765411-7bkur3lsi5e169815oljpm02f0hje4j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADk6QGV1o69VmuqR6jtGozGAs67t6qcpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350043765411-7bkur3lsi5e169815oljpm02f0hje4j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     lateinit var bottomNavigationView:BottomNavigationView
@@ -35,6 +37,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
     }
 
     private fun loadFragment(fragment: Fragment){
