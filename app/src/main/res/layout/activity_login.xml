@@ -27,14 +27,17 @@
         android:textSize="24sp" />
 
     <EditText
+        android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/edit_text_background"
-        android:hint="Username"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:padding="16dp" />
 
     <EditText
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
