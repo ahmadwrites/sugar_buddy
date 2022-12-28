@@ -7,10 +7,15 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.chip.Chip
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,6 +33,7 @@ class HomeFragment : Fragment() {
     lateinit var cardJournal: CardView
     lateinit var cardReport: CardView
     lateinit var contactReport: CardView
+    lateinit var tvHomeIntro: TextView
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -52,6 +58,14 @@ class HomeFragment : Fragment() {
         cardJournal = view.findViewById<CardView>(R.id.card_journal)
         cardReport = view.findViewById<CardView>(R.id.card_report)
         contactReport = view.findViewById<CardView>(R.id.card_contact)
+        tvHomeIntro = view.findViewById<TextView>(R.id.tv_home_intro);
+
+        val user = Firebase.auth.currentUser
+        user?.let {
+            val email = user.email
+        }
+
+        tvHomeIntro.setText("Hi, " + user?.email)
 
         btnCheckIn.setOnClickListener(View.OnClickListener {
 //            val fragmentManager = parentFragmentManager
