@@ -108,11 +108,11 @@ class RegisterActivity : AppCompatActivity() {
                                 user["lastName"] = lastName;
                                 user["userId"] = firebaseUser.uid;
 
-                                firestoreDatabase.collection("users").add(user)
+                                firestoreDatabase.collection("users").document(firebaseUser.uid).set(user)
                                     .addOnSuccessListener { documentReference ->
                                         Log.d(
                                             TAG,
-                                            "DocumentSnapshot added with ID: ${documentReference.id}"
+                                            "DocumentSnapshot added with ID: ${firebaseUser.uid}"
                                         )
 
                                     }.addOnFailureListener { e ->
