@@ -42,6 +42,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_symptoms"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -62,14 +63,15 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_start_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edit_text_background"
                     android:backgroundTint="@color/blue_100"
                     android:ems="10"
-                    android:inputType="date"
                     android:hint="Start Date of the Symptoms"
+                    android:inputType="date"
                     android:padding="16dp" />
 
                 <TextView
@@ -84,67 +86,57 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_additional_info"
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:gravity="start"
                     android:background="@drawable/edit_text_background"
                     android:backgroundTint="@color/blue_100"
+                    android:gravity="start"
                     android:hint="Additional Information about the symptoms"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
                     android:padding="16dp" />
 
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <CheckBox
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
                         android:fontFamily="@font/roboto_medium"
+                        android:text="Send report to nearest expert"
                         android:textColor="@color/gray_200"
-                        android:text="Send report to nearest expert"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <CheckBox
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:textColor="@color/gray_200"
-                        android:text="Shared symptoms to shared contacts"/>
-
-                </LinearLayout>
-
-                <LinearLayout
                     android:layout_marginTop="18dp"
-                    android:gravity="end"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:gravity="end">
 
                     <Button
-                        android:layout_marginRight="16dp"
+                        android:id="@+id/btn_cancel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
                         android:background="@drawable/button_background"
                         android:backgroundTint="#ccc"
                         android:text="Cancel" />
 
                     <Button
-                        android:textColor="#fff"
+                        android:id="@+id/btn_submit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_background"
-                        android:text="Submit" />
+                        android:text="Submit"
+                        android:textColor="#fff" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

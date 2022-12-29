@@ -193,7 +193,7 @@ class EditHealthProfileFragment : Fragment() {
                         }.addOnFailureListener { e ->
                             Toast.makeText(
                                 requireContext(),
-                                "An error occured: Please try again.",
+                                "An error occurred: Please try again.",
                                 Toast.LENGTH_SHORT
                             ).show()
                             Log.w(ContentValues.TAG, "Error adding document", e)

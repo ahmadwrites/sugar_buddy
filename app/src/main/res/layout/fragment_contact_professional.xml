@@ -115,6 +115,7 @@
                     android:hint="Message to doctor"
                     android:inputType="textMultiLine"
                     android:minLines="4"
+                    android:gravity="start"
                     android:padding="16dp" />
 
                 <LinearLayout
