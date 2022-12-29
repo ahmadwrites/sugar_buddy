@@ -63,6 +63,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_glucose_level"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -83,6 +84,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_carbohydrates_consumed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -103,9 +105,13 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_meal_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:gravity="start"
                     android:background="@drawable/edit_text_background"
                     android:backgroundTint="@color/blue_100"
                     android:hint="Meal Description"
@@ -123,6 +129,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_injuries"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -143,6 +150,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_insulin_injected"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -163,6 +171,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_no_insulin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -172,25 +181,27 @@
                     android:padding="16dp" />
 
                 <LinearLayout
-                    android:layout_marginTop="16dp"
-                    android:gravity="end"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="end">
 
                     <Button
-                        android:layout_marginRight="16dp"
+                        android:id="@+id/btn_cancel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
                         android:background="@drawable/button_background"
                         android:backgroundTint="#ccc"
                         android:text="Cancel" />
 
                     <Button
-                        android:textColor="#fff"
+                        android:id="@+id/btn_submit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_background"
-                        android:text="Submit" />
+                        android:text="Submit"
+                        android:textColor="#fff" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
