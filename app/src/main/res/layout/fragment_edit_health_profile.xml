@@ -5,193 +5,203 @@
     android:layout_height="match_parent"
     tools:context=".EditHealthProfileFragment">
 
-    <!-- TODO: Update Edit Health Profile Screen -->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue_50"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Edit Health Profile"
-            android:textColor="@color/blue_900"
-            android:textSize="32sp" />
-
-        <ScrollView
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:background="@color/blue_50"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Edit Health Profile"
+                android:textColor="@color/blue_900"
+                android:textSize="32sp" />
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Body Temperature (Celsius)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Body Temperature (Celsius)"
-                    android:padding="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Blood Pressure (/mmHg)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Blood Pressure (/mmHg)"
-                    android:padding="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Blood Oxygen Saturation (%)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Blood Oxygen Saturation (%)"
-                    android:padding="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Body Weight (kg)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Body Weight (kg)"
-                    android:padding="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Body Height (cm)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Body Height (cm)"
-                    android:padding="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Glucose Level (mg/dL)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Glucose Level (mg/dL)"
-                    android:padding="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/blue_900"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Heart Rate (BPM)"
-                    android:textColor="@color/blue_900"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text_background"
-                    android:backgroundTint="@color/blue_100"
-                    android:hint="Heart Rate (BPM)"
-                    android:padding="16dp" />
-
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button2"
-                        android:layout_width="150dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/button_background"
-                        android:text="Save Changes"
-                        android:textAllCaps="false"
-                        android:textColor="#ffffff"/>
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Body Temperature (Celsius)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_temperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Body Temperature (Celsius)"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Blood Pressure (/mmHg)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_blood_pressure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Blood Pressure (/mmHg)"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Blood Oxygen Saturation (%)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_oxygen_saturation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Blood Oxygen Saturation (%)"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Body Weight (kg)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_body_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Body Weight (kg)"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Body Height (cm)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_body_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Body Height (cm)"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Glucose Level (mg/dL)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_glucose_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Glucose Level (mg/dL)"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/blue_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Heart Rate (BPM)"
+                        android:textColor="@color/blue_900"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_bpm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:backgroundTint="@color/blue_100"
+                        android:hint="Heart Rate (BPM)"
+                        android:padding="16dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_save_health_profile"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_background"
+                            android:text="Save Changes"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </ScrollView>
 
-        </ScrollView>
-
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

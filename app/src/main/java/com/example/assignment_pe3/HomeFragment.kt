@@ -1,6 +1,8 @@
 package com.example.assignment_pe3
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
@@ -15,6 +17,7 @@ import com.google.android.material.chip.Chip
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,6 +37,7 @@ class HomeFragment : Fragment() {
     lateinit var cardReport: CardView
     lateinit var contactReport: CardView
     lateinit var tvHomeIntro: TextView
+    val firestoreDatabase = FirebaseFirestore.getInstance()
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -65,7 +69,24 @@ class HomeFragment : Fragment() {
             val email = user.email
         }
 
-        tvHomeIntro.setText("Hi, " + user?.email)
+        firestoreDatabase.collection("users").document(user!!.uid).get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val document = task.result
+                    if (document.exists()) {
+                        val firstName = document.getString("firstName")
+                        val lastName = document.getString("lastName")
+                        val username = document.getString("username")
+                        tvHomeIntro.setText("Hi, " + firstName + " " + lastName)
+                    } else {
+                        Log.d(TAG, "The document doesn't exist.")
+                    }
+                } else {
+                    task.exception?.message?.let {
+                        Log.d(TAG, it)
+                    }
+                }
+            }
 
         btnCheckIn.setOnClickListener(View.OnClickListener {
 //            val fragmentManager = parentFragmentManager

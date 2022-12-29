@@ -1,7 +1,9 @@
 package com.example.assignment_pe3
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +13,9 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,6 +32,9 @@ class ProfileFragment : Fragment() {
     lateinit var btnEditProfile: Button
     lateinit var btnHealthProfile: Button
     lateinit var tvLogout: TextView
+    lateinit var tvProfileName: TextView
+    lateinit var tvProfileEmail: TextView
+    val firestoreDatabase = FirebaseFirestore.getInstance()
 
     private var param1: String? = null
     private var param2: String? = null
@@ -48,6 +56,29 @@ class ProfileFragment : Fragment() {
         btnEditProfile = view.findViewById<Button>(R.id.btn_edit_profile)
         btnHealthProfile = view.findViewById<Button>(R.id.btn_health_profile)
         tvLogout = view.findViewById<TextView>(R.id.tv_logout);
+        tvProfileName = view.findViewById<TextView>(R.id.tv_profile_name);
+        tvProfileEmail = view.findViewById<TextView>(R.id.tv_profile_email);
+
+        val user = Firebase.auth.currentUser
+
+        firestoreDatabase.collection("users").document(user!!.uid).get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val document = task.result
+                    if (document.exists()) {
+                        val firstName = document.getString("firstName")
+                        val lastName = document.getString("lastName")
+                        tvProfileName.setText(firstName + " " + lastName)
+                        tvProfileEmail.setText(user?.email)
+                    } else {
+                        Log.d(ContentValues.TAG, "The document doesn't exist.")
+                    }
+                } else {
+                    task.exception?.message?.let {
+                        Log.d(ContentValues.TAG, it)
+                    }
+                }
+            }
 
         btnEditProfile.setOnClickListener(View.OnClickListener {
             val fragmentManager = parentFragmentManager
