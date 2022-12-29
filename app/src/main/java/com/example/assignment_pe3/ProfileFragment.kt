@@ -68,6 +68,7 @@ class ProfileFragment : Fragment() {
                     if (document.exists()) {
                         val firstName = document.getString("firstName")
                         val lastName = document.getString("lastName")
+                        val username = document.getString("username")
                         tvProfileName.setText(firstName + " " + lastName)
                         tvProfileEmail.setText(user?.email)
                     } else {

@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
@@ -25,17 +26,12 @@ class EditProfileFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-//    To change: This was copied from EDIT HEALTH PROFILE
-    val firestoreDatabase = FirebaseFirestore.getInstance()
+    lateinit var etFirstName: EditText
+    lateinit var etLastName: EditText
 
-    lateinit var etTemperature: EditText;
-    lateinit var etBloodPressure: EditText;
-    lateinit var etOxygenSaturation: EditText;
-    lateinit var etBodyWeight: EditText;
-    lateinit var etBodyHeight: EditText;
-    lateinit var etGlucoseLevel: EditText;
-    lateinit var etBpm: EditText;
-    lateinit var btnSave: Button;
+    lateinit var btnSaveProfile: Button
+
+    val firestoreDatabase = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,96 +47,84 @@ class EditProfileFragment : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_edit_profile, container, false);
 
-        etTemperature = view.findViewById<EditText>(R.id.et_temperature)
-        etBloodPressure = view.findViewById<EditText>(R.id.et_blood_pressure)
-        etOxygenSaturation = view.findViewById<EditText>(R.id.et_oxygen_saturation)
-        etBodyWeight = view.findViewById<EditText>(R.id.et_body_weight)
-        etBodyHeight = view.findViewById<EditText>(R.id.et_body_height)
-        etGlucoseLevel = view.findViewById<EditText>(R.id.et_glucose_level)
-        etBpm = view.findViewById<EditText>(R.id.et_bpm)
-        btnSave = view.findViewById<Button>(R.id.btn_save_health_profile)
+        etFirstName = view.findViewById<EditText>(R.id.et_firstName)
+        etLastName = view.findViewById<EditText>(R.id.et_lastName)
+
+        btnSaveProfile = view.findViewById<Button>(R.id.btn_save_profile)
 
         val user = Firebase.auth.currentUser
 
-        btnSave.setOnClickListener {
+        firestoreDatabase.collection("users").document(user!!.uid).get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val document = task.result
+                    if (document.exists()) {
+                        val firstName = document.getString("firstName")
+                        val lastName = document.getString("lastName")
+                        etFirstName.setText(firstName)
+                        etLastName.setText(lastName)
+                    } else {
+                        Log.d(ContentValues.TAG, "The document doesn't exist.")
+                    }
+                } else {
+                    task.exception?.message?.let {
+                        Log.d(ContentValues.TAG, it)
+                    }
+                }
+            }
+
+        btnSaveProfile.setOnClickListener {
             when {
-                TextUtils.isEmpty(etTemperature.text.toString().trim { it <= ' ' }) -> {
+                TextUtils.isEmpty(etFirstName.text.toString().trim { it <= ' ' }) -> {
                     Toast.makeText(
                         requireContext(),
-                        "Please enter temperature",
+                        "Please enter first name",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-                TextUtils.isEmpty(etBloodPressure.text.toString().trim { it <= ' ' }) -> {
+                TextUtils.isEmpty(etLastName.text.toString().trim { it <= ' ' }) -> {
                     Toast.makeText(
                         requireContext(),
-                        "Please enter blood pressure",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                TextUtils.isEmpty(etOxygenSaturation.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        requireContext(),
-                        "Please enter oxygen saturation",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                TextUtils.isEmpty(etBodyWeight.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        requireContext(),
-                        "Please enter body weight",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                TextUtils.isEmpty(etBodyHeight.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        requireContext(),
-                        "Please enter body height",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                TextUtils.isEmpty(etGlucoseLevel.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        requireContext(),
-                        "Please enter glucose level",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                TextUtils.isEmpty(etBpm.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        requireContext(),
-                        "Please enter heart rate",
+                        "Please enter last name",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
                 else -> {
-                    val temperature: String = etTemperature.text.toString().trim { it <= ' ' }
-                    val bloodPressure: String = etBloodPressure.text.toString().trim { it <= ' ' }
-                    val oxygenSaturation: String =
-                        etOxygenSaturation.text.toString().trim { it <= ' ' }
-                    val bodyWeight: String = etBodyWeight.text.toString().trim { it <= ' ' }
-                    val bodyHeight: String = etBodyHeight.text.toString().trim { it <= ' ' }
-                    val glucoseLevel: String = etGlucoseLevel.text.toString().trim { it <= ' ' }
-                    val bpm: String = etBpm.text.toString().trim { it <= ' ' }
+                    val firstName: String = etFirstName.text.toString().trim { it <= ' ' }
+                    val lastName: String = etLastName.text.toString().trim { it <= ' ' }
 
-                    val healthProfile: MutableMap<String, Any> = HashMap()
-                    healthProfile["userId"] = user!!.uid;
-                    healthProfile["temperature"] = temperature;
-                    healthProfile["bloodPressure"] = bloodPressure;
-                    healthProfile["oxygenSaturation"] = oxygenSaturation;
-                    healthProfile["bodyWeight"] = bodyWeight;
-                    healthProfile["bodyHeight"] = bodyHeight;
-                    healthProfile["glucoseLevel"] = glucoseLevel;
-                    healthProfile["bpm"] = bpm;
+                    val userProfile: MutableMap<String, Any> = HashMap()
+                    userProfile["firstName"] = firstName
+                    userProfile["lastName"] = lastName
 
-                    firestoreDatabase.collection("healthProfile").add(healthProfile)
+                    firestoreDatabase.collection("users").document(user!!.uid)
+                        .set(userProfile)
                         .addOnSuccessListener { documentReference ->
                             Log.d(
                                 ContentValues.TAG,
-                                "DocumentSnapshot added with ID: ${documentReference.id}"
+                                "DocumentSnapshot added with ID: ${user!!.uid}"
                             )
+                            Toast.makeText(
+                                requireContext(),
+                                "Successfully saved profile.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            val fragmentManager = parentFragmentManager
+                            val fragmentTransaction: FragmentTransaction =
+                                fragmentManager.beginTransaction()
+                            fragmentTransaction.replace(
+                                R.id.frame_layout,
+                                HealthProfileFragment()
+                            )
+                            fragmentTransaction.addToBackStack(null)
+                            fragmentTransaction.commit()
 
                         }.addOnFailureListener { e ->
+                            Toast.makeText(
+                                requireContext(),
+                                "An error occurred: Please try again.",
+                                Toast.LENGTH_SHORT
+                            ).show()
                             Log.w(ContentValues.TAG, "Error adding document", e)
                         }
                 }

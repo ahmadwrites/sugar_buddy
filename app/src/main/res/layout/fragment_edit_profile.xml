@@ -38,17 +38,18 @@
             android:drawablePadding="8dp"
             android:drawableTint="@color/blue_900"
             android:fontFamily="@font/roboto_medium"
-            android:text="Name"
+            android:text="First Name"
             android:textColor="@color/blue_900"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/et_firstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_text_background"
             android:backgroundTint="@color/blue_100"
-            android:hint="Enter New Name"
+            android:hint="Enter Last Name"
             android:padding="16dp" />
 
         <TextView
@@ -58,21 +59,22 @@
             android:drawablePadding="8dp"
             android:drawableTint="@color/blue_900"
             android:fontFamily="@font/roboto_medium"
-            android:text="E-mail"
+            android:text="Last Name"
             android:textColor="@color/blue_900"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/et_lastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_text_background"
             android:backgroundTint="@color/blue_100"
-            android:hint="Enter New Email"
+            android:hint="Enter First Name"
             android:padding="16dp" />
 
         <Button
-            android:id="@+id/save_changes_btn"
+            android:id="@+id/btn_save_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
