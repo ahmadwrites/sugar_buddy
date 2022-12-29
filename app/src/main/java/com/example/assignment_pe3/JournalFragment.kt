@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.chip.Chip
+import com.google.firebase.firestore.FirebaseFirestore
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +26,14 @@ class JournalFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
+
+    val firestoreDatabase = FirebaseFirestore.getInstance()
+
+    lateinit var etJournalTitle: EditText;
+    lateinit var etJournalContents: EditText;
+    lateinit var etJournalTags: EditText;
+    lateinit var etJournalFeelings: EditText;
+    lateinit var btnSubmit: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

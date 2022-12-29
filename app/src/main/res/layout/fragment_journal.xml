@@ -64,6 +64,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_journal_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -84,8 +85,11 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_journal_contents"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
                     android:layout_marginTop="8dp"
                     android:gravity="start"
                     android:background="@drawable/edit_text_background"
@@ -105,6 +109,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_journal_tags"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -125,6 +130,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:id="@+id/et_journal_feelings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -140,6 +146,7 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/btn_journal_cancel"
                         android:layout_marginRight="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -148,6 +155,7 @@
                         android:text="Cancel" />
 
                     <Button
+                        android:id="@+id/btn_journal_submit"
                         android:textColor="#fff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

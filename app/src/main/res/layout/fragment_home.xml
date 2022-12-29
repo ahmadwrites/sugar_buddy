@@ -376,6 +376,7 @@
                 android:textSize="20sp" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_news1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -388,7 +389,7 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/news_1" />
+                        android:src="@drawable/news_1_card" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -400,20 +401,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="How to Track Diabetes 2"
+                            android:text="Monitoring Your Blood Sugar"
                             android:textColor="#000"
                             android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="By John Smith"
+                            android:text="By CDC"
                             android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_news2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -426,7 +428,7 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/news_2" />
+                        android:src="@drawable/news2_card" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -438,20 +440,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="Diet for Diabetics"
+                            android:text="The Diabetes Diet"
                             android:textColor="#000"
                             android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="By Jane Smith"
+                            android:text="By Jeanne Segal"
                             android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_news3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -464,7 +467,7 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/news_3" />
+                        android:src="@drawable/news3_card" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -476,20 +479,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="How to Live with Diabetes 2"
+                            android:text="Living Well With Diabetes"
                             android:textColor="#000"
                             android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="By Jordan Blake"
+                            android:text="By CDC"
                             android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_news4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -502,7 +506,7 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/news_4" />
+                        android:src="@drawable/news4_card" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -514,14 +518,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="Keeping Fit While Diabetic"
+                            android:text="6 Great Exercises for People With Diabetes"
                             android:textColor="#000"
                             android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="By Teo Wang"
+                            android:text="By Jessica Migala"
                             android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>

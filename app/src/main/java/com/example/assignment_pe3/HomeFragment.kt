@@ -1,6 +1,8 @@
 package com.example.assignment_pe3
 
 import android.content.ContentValues.TAG
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -36,6 +38,10 @@ class HomeFragment : Fragment() {
     lateinit var cardJournal: CardView
     lateinit var cardReport: CardView
     lateinit var contactReport: CardView
+    lateinit var news1: CardView
+    lateinit var news2: CardView
+    lateinit var news3: CardView
+    lateinit var news4: CardView
     lateinit var tvHomeIntro: TextView
     val firestoreDatabase = FirebaseFirestore.getInstance()
 
@@ -62,6 +68,10 @@ class HomeFragment : Fragment() {
         cardJournal = view.findViewById<CardView>(R.id.card_journal)
         cardReport = view.findViewById<CardView>(R.id.card_report)
         contactReport = view.findViewById<CardView>(R.id.card_contact)
+        news1 = view.findViewById<CardView>(R.id.card_news1)
+        news2 = view.findViewById<CardView>(R.id.card_news2)
+        news3 = view.findViewById<CardView>(R.id.card_news3)
+        news4 = view.findViewById<CardView>(R.id.card_news4)
         tvHomeIntro = view.findViewById<TextView>(R.id.tv_home_intro);
 
         val user = Firebase.auth.currentUser
@@ -161,6 +171,34 @@ class HomeFragment : Fragment() {
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
+        })
+
+        news1.setOnClickListener(View.OnClickListener {
+            val url = "https://www.cdc.gov/diabetes/managing/managing-blood-sugar/bloodglucosemonitoring.html"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        })
+
+        news2.setOnClickListener(View.OnClickListener {
+            val url = "https://www.helpguide.org/articles/diets/the-diabetes-diet.htm"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        })
+
+        news3.setOnClickListener(View.OnClickListener {
+            val url = "https://www.cdc.gov/diabetes/library/features/living-well-with-diabetes.html"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        })
+
+        news4.setOnClickListener(View.OnClickListener {
+            val url = "https://www.everydayhealth.com/type-2-diabetes/living-with/great-exercises-for-people-with-diabetes/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
         })
 
         // Inflate the layout for this fragment
