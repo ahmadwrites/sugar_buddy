@@ -26,30 +26,7 @@
                 android:textColor="@color/blue_900"
                 android:textSize="32sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Monitored Daily"
-                android:textColor="@color/gray_200"
-                android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/glucose_insulin_concentration"
-                android:layout_width="350dp"
-                android:layout_height="250dp"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center"
-                android:src="@drawable/glucose_and_insulin_graph" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Weight and Pulse Rate"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/blue_900"
-                android:textSize="32sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,7 +42,7 @@
                 android:layout_height="250dp"
                 android:layout_marginTop="15dp"
                 android:layout_gravity="center"
-                android:src="@drawable/dashboard_weight_and_pulse_rate" />
+                android:src="@drawable/glucose_and_insulin_graph" />
 
             <TextView
                 android:layout_width="wrap_content"

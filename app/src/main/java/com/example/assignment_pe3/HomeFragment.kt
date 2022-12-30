@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentTransaction
@@ -42,6 +43,7 @@ class HomeFragment : Fragment() {
     lateinit var news2: CardView
     lateinit var news3: CardView
     lateinit var news4: CardView
+    lateinit var search: TextView
     lateinit var tvHomeIntro: TextView
     val firestoreDatabase = FirebaseFirestore.getInstance()
 
@@ -68,6 +70,7 @@ class HomeFragment : Fragment() {
         cardJournal = view.findViewById<CardView>(R.id.card_journal)
         cardReport = view.findViewById<CardView>(R.id.card_report)
         contactReport = view.findViewById<CardView>(R.id.card_contact)
+        search = view.findViewById<TextView>(R.id.tv_search)
         news1 = view.findViewById<CardView>(R.id.card_news1)
         news2 = view.findViewById<CardView>(R.id.card_news2)
         news3 = view.findViewById<CardView>(R.id.card_news3)
@@ -122,6 +125,21 @@ class HomeFragment : Fragment() {
             fragmentTransaction.replace(
                 R.id.frame_layout,
                 ContactProfessionalFragment()
+            )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        })
+
+        search.setOnClickListener(View.OnClickListener {
+            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
+                R.id.home;
+
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(
+                R.id.frame_layout,
+                SearchFragment()
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
