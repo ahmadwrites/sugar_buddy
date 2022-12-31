@@ -39,6 +39,7 @@ class HomeFragment : Fragment() {
     lateinit var cardJournal: CardView
     lateinit var cardReport: CardView
     lateinit var contactReport: CardView
+    lateinit var dashboard: CardView
     lateinit var news1: CardView
     lateinit var news2: CardView
     lateinit var news3: CardView
@@ -66,6 +67,7 @@ class HomeFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
         btnCheckIn = view.findViewById<Chip>(R.id.btn_check_in)
+        dashboard = view.findViewById<CardView>(R.id.card_dashboard)
         cardHistory = view.findViewById<CardView>(R.id.card_history)
         cardJournal = view.findViewById<CardView>(R.id.card_journal)
         cardReport = view.findViewById<CardView>(R.id.card_report)
@@ -155,6 +157,21 @@ class HomeFragment : Fragment() {
             fragmentTransaction.replace(
                 R.id.frame_layout,
                 ReportSymptomsFragment()
+            )
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        })
+
+        dashboard.setOnClickListener(View.OnClickListener {
+            (activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView))?.selectedItemId =
+                R.id.dashboard;
+
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(
+                R.id.frame_layout,
+                DashboardFragment()
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
